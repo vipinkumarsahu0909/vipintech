@@ -1,24 +1,36 @@
 package com.nt.string;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
 public class StringLogical {
 
 	public static void main(String[] args) {
-		
-		int number=13;
-		palindrome(number);
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter String::");
+		String st = sc.nextLine();
+		distinctWord(st);
 	}
-	public static void palindrome(int num) {
-		int count=0;
-		for(int i=2;i<num;i++) {
-			if(num%i==0) {
-				count++;
-			}
-		}	if(count==0) {
-				System.out.println("it is prime number");
+	public static void distinctWord(String st) {
+		Map<Character, Integer> map=new HashMap<>();
+		char[] ch=st.toCharArray();
+		for(char c:ch) {
+			if(!map.containsKey(c)) {
+				map.put(c, 1);
 			}
 			else {
-				System.out.println("it is not prime number");
+				map.put(c, map.get(c)+1);
 			}
-		
+		}
+		System.out.println(map);
+		Set<Map.Entry<Character, Integer>> set=map.entrySet();
+		for(Map.Entry<Character, Integer> map1:set) {
+			if(map1.getValue()>1){
+				System.out.println(map1.getKey()+"    "+map1.getValue());
+			}
+		}
 	}
 }

@@ -3,7 +3,7 @@ package com.nt.array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DeleteDuplicateElementFromArray {
+public class DeleteDuplicateValue {
 
 	public static void main(String[] args) {
 		

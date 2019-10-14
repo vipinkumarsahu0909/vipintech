@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
+import java.util.Set;import com.nt.coll.MapColl;
 
 public class StringLogical {
 
@@ -14,16 +14,20 @@ public class StringLogical {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter String::");
 		String st=sc.nextLine();
-		countConsonantsAndVowels(st);
+		System.out.println("Enter String::");
+		String st2=sc.nextLine();
 		
+		System.out.println(mergeString(st,st2));
 	}
-	public static void countConsonantsAndVowels(String str) {
-		int ccount=0;
-		for(int i=0;i<str.length();i++) {
-			if(str.charAt(i)!=' ') {
-				ccount++;
-			}
+	public static boolean mergeString(String str1,String str2) {
+	
+		if(str1.length()!=str2.length()) {
+			return false;
 		}
-		System.out.println(ccount);
-		}
+		String s3=str1+str1;
+		if(s3.contains(str2))
+			return true;
+		else
+			return false;
+	}
 	}

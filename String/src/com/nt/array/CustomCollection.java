@@ -8,7 +8,7 @@ public class CustomCollection {
 		if(size()==capacity()) {
 			increaseCapacity();
 		}
-		obj[count]=object;
+		obj[count++]=object;
 	}
 	public int size() {
 		return count;

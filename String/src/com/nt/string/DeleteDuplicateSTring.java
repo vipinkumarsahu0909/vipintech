@@ -28,5 +28,8 @@ public class DeleteDuplicateSTring {
 		}
 		System.out.println(orgSet);
 		System.out.println(dupSet);
+		if(orgSet.contains("kumar")) {
+			System.out.println("yes");
+		}
 	}
 }

@@ -17,8 +17,9 @@ public class DuplicateCharInString {
 			}
 			else {
 				map.put(ch, map.get(ch)+1);
-			}
-			
+			}}
+			System.out.println(map);
+		
 			Set<Map.Entry<Character, Integer>> entryset=map.entrySet();
 			for(Map.Entry<Character, Integer> entry:entryset) {
 				if(entry.getValue()>1) {
@@ -26,8 +27,8 @@ public class DuplicateCharInString {
 				}
 			}
 		}
-		System.out.println(map);
-	}
+		
+	
 	public static void main(String[] args) {
 
 //		String str="vipin kumar";
